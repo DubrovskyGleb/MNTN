@@ -1,0 +1,75 @@
+@import 'nullstyle';
+@import 'fonts';
+@import 'colors';
+@import 'mixins';
+@import 'burger';
+
+h1,
+h2{
+    font-family: $chronicle;
+}
+
+body._lock{
+    overflow: hidden;
+}
+
+.icon{
+    font-size: 20px;
+    color: #fff;
+}
+
+.container{
+    width: 100%;
+    max-width: 1760px;
+    margin: 0 auto;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    & span{
+        font-family: $gilroyM;
+        font-size: 18px;
+    }
+}
+
+.logo__text{
+    font-family: $chronicle;
+    color: white;
+    @include adaptiv-value("font-size", 32, 24, 1);
+    line-height: 38px;
+    letter-spacing: 0.01em;
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    &__line{
+        height: 2px;
+        background-color: $orange;
+        @include adaptiv-value("width", 72, 30, 1);
+    }
+    &__text{
+        font-family: $gilroyE;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: $orange;
+        margin-left: 32px;
+        @include adaptiv-value("margin-left", 32, 15, 1);
+        @include adaptiv-value("font-size", 18, 14, 1);
+    }
+}
+
+@media(max-width: 1810px){
+    .container{
+        @include adaptiv-value("padding-right", 50, 20, 1);
+        @include adaptiv-value("padding-left", 50, 20, 1);
+    }
+}
+
+@import 'header';
+@import 'hero';
+@import 'started';

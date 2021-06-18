@@ -1,0 +1,97 @@
+.hero__header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    @include adaptiv-value("padding-top", 50, 20, 1);
+}
+
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    &__list{
+        display: flex;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        justify-content: center;
+    }
+    &__item{
+        padding: 0 20px;
+    }
+    &__link{
+        font-family: $gilroyB;
+        color: #fff;
+        font-size: 18px;
+    }
+}
+
+.login{
+    &__text{
+        font-family: $gilroyM;
+        color: #fff;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 754px) {
+    .header__container{
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu{
+        position: fixed;
+        background-color: #0B1D26;
+        width: 50%;
+        height: 100%;
+        display: grid;
+        grid-template: auto 1fr / 1fr;
+        top: 0;
+        right: -100%;
+        z-index: 5;
+        transition: right 0.4s ease 0s;
+        overflow: auto;
+        &__list{
+            position: static;
+            flex-direction: column;
+            justify-content: end;
+            padding-top: 40px;
+            order: 2;
+        }
+        &__item{
+            text-align: center;
+            padding-bottom: 20px;
+        }
+    }
+
+    .menu._active{
+        right: 0;
+    }
+
+    .login{
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+    }
+
+    .icon-user-circle-o{
+        font-size: 40px;
+        padding: 40px 0 15px 0;
+    }
+
+    
+}
+
+@media (max-width: 660px){
+    .menu{
+        width: 100%;
+    }
+}
