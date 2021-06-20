@@ -1,12 +1,14 @@
-.hero__header{
+.header{
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    // position: relative;
     @include adaptiv-value("padding-top", 50, 20, 1);
+    position: absolute;
 }
+
 
 .menu{
     width: 100%;

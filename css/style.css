@@ -341,7 +341,7 @@ body._lock {
   }
 }
 
-.hero__header {
+.header {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -353,12 +353,12 @@ body._lock {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
   padding-top: 50px;
+  position: absolute;
 }
 
 @media (max-width: 1760px) {
-  .hero__header {
+  .header {
     padding-top: calc(20px + 30 * ((100vw - 320px) / 1440));
   }
 }
@@ -482,10 +482,10 @@ body._lock {
 
 .hero {
   width: 100%;
+  position: relative;
 }
 
 .hero__space {
-  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
   overflow: hidden;
   min-height: 100vh;
   padding-bottom: 100px;
@@ -497,31 +497,19 @@ body._lock {
   }
 }
 
-.hero__container {
-  position: relative;
-}
-
 .hero__body {
+  min-width: 100%;
+  height: 100%;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 25vh;
-}
-
-.hero__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hero__title {
@@ -645,6 +633,84 @@ body._lock {
   border-radius: 2px;
   background-color: #fff;
   right: 0;
+}
+
+.parallax {
+  position: absolute;
+}
+
+.parallax__item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.parallax__clouds {
+  background: url("../img/clouds.png") top/cover no-repeat;
+  top: 0;
+  z-index: 1;
+}
+
+.parallax__mountains {
+  background: url("../img/mountains.png") top/cover no-repeat;
+  top: 40%;
+  z-index: 4;
+}
+
+.parallax__human {
+  background: url("../img/human.png") top/cover no-repeat;
+  top: 60%;
+  z-index: 5;
+}
+
+.parallax__content {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 25%;
+  z-index: 3;
+}
+
+.parallax__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.parallax__gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
+}
+
+.hero__images {
+  width: 120%;
+  /*чтобы не видно было краев экрана при движении*/
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  z-index: 1;
+}
+
+.parallax__clouds,
+.parallax__mountains,
+.parallax__human {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
 }
 
 @media (max-width: 754px) {
