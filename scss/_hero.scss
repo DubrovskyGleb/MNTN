@@ -2,9 +2,8 @@
     width: 100%;
     position: relative;
     &__space{
-        
-        overflow: hidden;
         min-height: 100vh;
+        overflow: hidden;
         @include adaptiv-value("padding-bottom", 100, 50, 1);
     }
     &__body{
@@ -33,149 +32,12 @@
             margin-right: 15px;
         }
     }
-    &__logo{
-        position: absolute;
-        top: 46%;
-    }
-}
-
-.socials{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top: 103px;
-    &__text{
-        position: absolute;
-        transform: rotate(90deg);
-        font-family: $gilroyB;
-        color: #fff;
-        font-size: 18px;
-        width: 77px;
-    }
-    & span{
-        top: 38px;
-    }
-}
-
-.icon-twitter{
-    padding-top: 24px;
-}
-
-.scroll{
-    display: flex;
-    position: relative;
-    &__link{
-        font-family: $gilroyM;
-        color: #ffffff7a;
-        font-size: 18px;
-    }
-    &__link._active{
-        color: #ffffff;
-        transform: scale(1.5);
-    }
-    &__item{
-        padding: 20px 0;
-        text-align: end;
-    }
-    &__slider{
-        width: 3px;
-        height: 244px;
-        position: relative;
-        background-color: #fff;
-        margin-left: 32px;
-        border-radius: 1px;
-        opacity: .3;
-    }
-    &__marker{
-        position: absolute;
-        width: 3px;
-        height: 61px;
-        border-radius: 2px;
-        background-color: #fff;
-        right: 0;
-    }
-}
-
-.parallax{
-    position: absolute;
-    &__item{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-    }
-    &__clouds{
-        background: url("../img/clouds.png") top / cover no-repeat;
-        top: 0;
-        z-index: 1;
-    }
-    &__mountains{
-        background: url("../img/mountains.png") top / cover no-repeat;
-        top: 40%;
-        z-index: 4;
-    }
-    &__human{
-        background: url("../img/human.png") top / cover no-repeat;
-        top: 60%;
-        z-index: 5;
-    }
-    &__content{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 25%;
-        z-index: 3;
-    }
-    &__text{
-        display: flex;
-        justify-content: center;
-        
-    }
-    &__gradient{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
-    }
-}
-
-.hero__images{
-	width: 120%; /*чтобы не видно было краев экрана при движении*/
-	height: 120%;
-	top: -10%;
-	left: -10%;
-	z-index: 1;
-}
-
-.parallax__clouds,
-.parallax__mountains,
-.parallax__human{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
 }
 
 @media (max-width: 754px) {
     .hero{
-        &__socials{
-            display: none;
-        }
         &__body{
             justify-content: space-around;
         }
-        &__logo{
-            position:static;
-            display: inline-flex;
-        }
     }
-
-    .scroll{
-        display: none;
-    }
-
 }

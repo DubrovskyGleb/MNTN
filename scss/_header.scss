@@ -4,11 +4,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // position: relative;
     @include adaptiv-value("padding-top", 50, 20, 1);
-    position: absolute;
+    position: fixed;
+    z-index: 7;
+    &__logo{
+        position: absolute;
+        top: 46%;
+    }
 }
-
 
 .menu{
     width: 100%;
@@ -20,6 +23,7 @@
         position: absolute;
         left: 0%;
         right: 0%;
+        bottom:0;
         justify-content: center;
     }
     &__item{
@@ -41,10 +45,16 @@
 }
 
 @media (max-width: 754px) {
-    .header__container{
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
+    .header{
+        &__logo{
+            position:static;
+            display: inline-flex;
+        }
+        &__container{
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     .menu{
@@ -88,8 +98,6 @@
         font-size: 40px;
         padding: 40px 0 15px 0;
     }
-
-    
 }
 
 @media (max-width: 660px){

@@ -354,13 +354,19 @@ body._lock {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 50px;
-  position: absolute;
+  position: fixed;
+  z-index: 7;
 }
 
 @media (max-width: 1760px) {
   .header {
     padding-top: calc(20px + 30 * ((100vw - 320px) / 1440));
   }
+}
+
+.header__logo {
+  position: absolute;
+  top: 46%;
 }
 
 .menu {
@@ -381,6 +387,7 @@ body._lock {
   position: absolute;
   left: 0%;
   right: 0%;
+  bottom: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -403,6 +410,12 @@ body._lock {
 }
 
 @media (max-width: 754px) {
+  .header__logo {
+    position: static;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
   .header__container {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -486,8 +499,8 @@ body._lock {
 }
 
 .hero__space {
-  overflow: hidden;
   min-height: 100vh;
+  overflow: hidden;
   padding-bottom: 100px;
 }
 
@@ -551,9 +564,104 @@ body._lock {
   margin-right: 15px;
 }
 
-.hero__logo {
+@media (max-width: 754px) {
+  .hero__body {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.parallax {
   position: absolute;
-  top: 46%;
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  z-index: 1;
+}
+
+.parallax__clouds {
+  background: url("../img/clouds.png") top/cover no-repeat;
+  top: 0;
+  z-index: 1;
+}
+
+.parallax__gradient {
+  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
+  z-index: 2;
+}
+
+.parallax__mountains {
+  background: url("../img/mountains.png") top/cover no-repeat;
+  top: 40%;
+  z-index: 3;
+}
+
+.parallax__human {
+  background: url("../img/human.png") top/cover no-repeat;
+  top: 60%;
+  z-index: 5;
+}
+
+.parallax__content {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 25%;
+  z-index: 4;
+}
+
+.parallax__item,
+.parallax__clouds,
+.parallax__mountains,
+.parallax__human,
+.parallax__gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+.parallax-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-aspect-ratio: 3 / 2) {
+  .parallax__human {
+    background-position: 20% top;
+  }
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 8;
+}
+
+.slider__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .socials {
@@ -571,7 +679,7 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 103px;
+  padding-bottom: 42px;
 }
 
 .socials__text {
@@ -585,7 +693,7 @@ body._lock {
 }
 
 .socials span {
-  top: 38px;
+  top: 65px;
 }
 
 .icon-twitter {
@@ -635,97 +743,9 @@ body._lock {
   right: 0;
 }
 
-.parallax {
-  position: absolute;
-}
-
-.parallax__item {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.parallax__clouds {
-  background: url("../img/clouds.png") top/cover no-repeat;
-  top: 0;
-  z-index: 1;
-}
-
-.parallax__mountains {
-  background: url("../img/mountains.png") top/cover no-repeat;
-  top: 40%;
-  z-index: 4;
-}
-
-.parallax__human {
-  background: url("../img/human.png") top/cover no-repeat;
-  top: 60%;
-  z-index: 5;
-}
-
-.parallax__content {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  top: 25%;
-  z-index: 3;
-}
-
-.parallax__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.parallax__gradient {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
-}
-
-.hero__images {
-  width: 120%;
-  /*чтобы не видно было краев экрана при движении*/
-  height: 120%;
-  top: -10%;
-  left: -10%;
-  z-index: 1;
-}
-
-.parallax__clouds,
-.parallax__mountains,
-.parallax__human {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-}
-
 @media (max-width: 754px) {
-  .hero__socials {
+  .socials {
     display: none;
-  }
-  .hero__body {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .hero__logo {
-    position: static;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
   }
   .scroll {
     display: none;
