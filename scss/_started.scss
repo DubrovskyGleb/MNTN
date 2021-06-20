@@ -1,6 +1,5 @@
-.started{
+.block{
     &__space{
-        background-color: #0B1D26;
         padding: 100px 0;
     }
     &__container{
@@ -13,8 +12,8 @@
         @include adaptiv-value("padding-left", 50, 20, 1);
     }
     &__content{
-        @include adaptiv-value("padding-left", 150, 5, 1);
         position: relative;
+        @include adaptiv-value("padding-left", 150, 5, 1);
     }
     &__number{
         position: absolute;
@@ -49,7 +48,25 @@
     &__image img{
         max-width: 100%;
     }
-    &__image{
-        position: relative;
+}
+
+.essential{
+    &__content{
+        @include adaptiv-value("padding-left", 250, 105, 1); 
     }
+    &__number{
+        left: 100px;
+    }
+    &__text{
+        padding-right: 0;
+    }
+}
+
+.essential,
+.key{
+    background-color: $bc;
+}
+
+.started{
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, $bc 61.38%);
 }

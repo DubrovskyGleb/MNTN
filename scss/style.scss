@@ -24,6 +24,12 @@ body._lock{
     margin: 0 auto;
 }
 
+.content__wrapper{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
 .button{
     display: flex;
     align-items: center;
