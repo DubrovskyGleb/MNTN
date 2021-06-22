@@ -1,0 +1,103 @@
+.footer{
+    background-color: $bc;
+    color: #ffffff;
+    &__container{
+        display: flex;
+        align-items: stretch;
+    }
+    &__completion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: 50px;
+    }
+    &__description{
+        display: block;
+        width: 300px;
+        height: auto;
+        font-family: $gilroyB;
+        font-size: 18px;
+        line-height: 170%;
+        margin-top: 24px;
+    }
+    &__license{
+        display: flex;
+        flex-direction: column;
+        font-family: $gilroyM;
+        font-size: 18px;
+        color: #ffffff80;
+    }
+    &__author{
+        margin-top: 10px;
+    }
+}
+
+.author{
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+
+.footer-links{
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 566px;
+    justify-content: space-between;
+    &__title{
+        font-family: $gilroyB;
+        color: $orange;
+        line-height: 32px;
+        @include adaptiv-value("font-size", 24, 20, 1);
+    }
+    &__list{
+        @include adaptiv-value("padding-top", 8, 0, 1);
+    }
+    &__item{
+        font-family: $gilroyM;
+        line-height: 32px;
+        @include adaptiv-value("margin-top", 16, 8, 1);
+        @include adaptiv-value("font-size", 18, 16, 1);
+    }
+}
+
+@media(max-width: 980px) {
+    .footer{
+        &__completion{
+            order: 2;
+            margin: 0 auto;
+            padding-right: 0px;
+        }
+        &__description{
+            width: 100%;
+            text-align: center;
+        }
+        &__logo{
+            display: none;
+        }
+        &__license{
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+    
+    .footer-links{
+        order: 1;
+        min-width: 100%;
+        justify-content: space-around;
+    }
+}
+
+@media(max-width: 480px){
+    .footer{
+        &__description{
+            line-height: 150%;
+        }
+        &__license{
+            font-size: 14px;
+        }
+    }
+
+    .mntn__group{
+        display: none;
+    }
+}

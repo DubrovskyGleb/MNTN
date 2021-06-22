@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include adaptiv-value("padding-top", 50, 20, 1);
+    @include adaptiv-value("padding-top", 50, 10, 1);
     position: fixed;
     z-index: 7;
     &__logo{

@@ -34,9 +34,11 @@ body._lock{
     display: flex;
     align-items: center;
     background-color: transparent;
+    max-width: 135px;
     & span{
         font-family: $gilroyM;
         font-size: 18px;
+        margin-right: 15px;
     }
 }
 
@@ -51,6 +53,7 @@ body._lock{
 .description{
     display: flex;
     align-items: center;
+    position: relative;
     &__line{
         height: 2px;
         background-color: $orange;
@@ -81,3 +84,4 @@ body._lock{
 @import 'parallax';
 @import 'slider';
 @import 'started';
+@import 'footer';
