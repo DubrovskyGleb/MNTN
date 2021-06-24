@@ -21,9 +21,9 @@ $maxWidthContainer: 1760;
   }
 }
 
-@mixin adaptiv-value2($property, $startSize, $minSize, $widthContainer){
-  $addSize: $startSize - $minSize;
-  @media(max-width: #{$widthContainer + px}){
-    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$widthContainer - 320}));
-  }
-}
+// @mixin adaptiv-position($property){
+//   $width: 100vw;
+//   @if ($width == 1760px) {
+//     #{$property}: none;
+//   }
+// }

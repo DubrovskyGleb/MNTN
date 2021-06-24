@@ -577,10 +577,8 @@ body._lock {
 
 .parallax {
   position: absolute;
-  width: 120%;
-  height: 120%;
-  top: -10%;
-  left: -10%;
+  width: 100%;
+  height: 100%;
   z-index: 1;
 }
 
@@ -603,7 +601,7 @@ body._lock {
 
 .parallax__human {
   background: url("../img/human.png") top/cover no-repeat;
-  top: 60%;
+  top: 65%;
   z-index: 5;
 }
 
@@ -616,7 +614,7 @@ body._lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  top: 25%;
+  top: 20%;
   z-index: 4;
 }
 
@@ -649,14 +647,16 @@ body._lock {
 .slider {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 8;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .slider__container {
@@ -670,7 +670,7 @@ body._lock {
 }
 
 .socials {
-  position: relative;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -684,7 +684,9 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 42px;
+  padding-top: 107px;
+  z-index: 10;
+  left: calc((100vw - 1760px)/2);
 }
 
 .socials__text {
@@ -694,11 +696,8 @@ body._lock {
   font-family: "Gilroy-Bold";
   color: #fff;
   font-size: 18px;
-  width: 77px;
-}
-
-.socials span {
-  top: 65px;
+  width: 78px;
+  top: 39px;
 }
 
 .icon-twitter {
@@ -709,7 +708,9 @@ body._lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  position: fixed;
+  z-index: 10;
+  right: calc((100vw - 1760px)/2);
 }
 
 .scroll__link {
@@ -748,7 +749,31 @@ body._lock {
   right: 0;
 }
 
-@media (max-width: 754px) {
+@media (max-width: 1810px) {
+  .socials {
+    left: 50px;
+  }
+}
+
+@media (max-width: 1810px) and (max-width: 1760px) {
+  .socials {
+    left: calc(20px + 30 * ((100vw - 320px) / 1440));
+  }
+}
+
+@media (max-width: 1810px) {
+  .scroll {
+    right: 50px;
+  }
+}
+
+@media (max-width: 1810px) and (max-width: 1760px) {
+  .scroll {
+    right: calc(20px + 30 * ((100vw - 320px) / 1440));
+  }
+}
+
+@media (max-width: 1680px) {
   .socials {
     display: none;
   }
