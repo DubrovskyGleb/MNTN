@@ -33,9 +33,10 @@
 }
 
 .author{
-    text-decoration: none;
-    color: #ffffff;
-    
+    display: inline-flex;
+    &::before{
+        bottom: -3px;
+    }
 }
 
 .footer-links{
@@ -53,10 +54,17 @@
         @include adaptiv-value("padding-top", 8, 0, 1);
     }
     &__item{
-        font-family: $gilroyM;
         line-height: 32px;
+        font-family: $gilroyM;
         @include adaptiv-value("margin-top", 16, 8, 1);
         @include adaptiv-value("font-size", 18, 16, 1);
+    }
+}
+
+.footer__link{
+    display: inline-flex;
+    &::before{
+        bottom: -1px;
     }
 }
 

@@ -331,6 +331,32 @@ body._lock {
   }
 }
 
+.common__link {
+  position: relative;
+  color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.common__link:hover {
+  color: #ececec;
+}
+
+.common__link:hover::before {
+  width: 100%;
+}
+
+.common__link::before {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #FBD784;
+  position: absolute;
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
 @media (max-width: 1810px) {
   .container {
     padding-right: 50px;
@@ -408,8 +434,14 @@ body._lock {
 
 .menu__link {
   font-family: "Gilroy-Bold";
-  color: #fff;
   font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__link::before {
+  bottom: -5px;
 }
 
 .login__text {
@@ -585,37 +617,25 @@ body._lock {
 .parallax__clouds {
   background: url("../img/clouds.png") top/cover no-repeat;
   top: 0;
-  z-index: 1;
 }
 
 .parallax__gradient {
   background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
-  z-index: 2;
 }
 
 .parallax__mountains {
   background: url("../img/mountains.png") top/cover no-repeat;
   top: 40%;
-  z-index: 3;
 }
 
 .parallax__human {
   background: url("../img/human.png") top/cover no-repeat;
   top: 65%;
-  z-index: 5;
 }
 
 .parallax__content {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   top: 20%;
-  z-index: 4;
 }
 
 .parallax__item,
@@ -1049,8 +1069,13 @@ body._lock {
 }
 
 .author {
-  text-decoration: none;
-  color: #ffffff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.author::before {
+  bottom: -3px;
 }
 
 .footer-links {
@@ -1090,8 +1115,8 @@ body._lock {
 }
 
 .footer-links__item {
-  font-family: "Gilroy-Medium";
   line-height: 32px;
+  font-family: "Gilroy-Medium";
   margin-top: 16px;
   font-size: 18px;
 }
@@ -1106,6 +1131,16 @@ body._lock {
   .footer-links__item {
     font-size: calc(16px + 2 * ((100vw - 320px) / 1440));
   }
+}
+
+.footer__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.footer__link::before {
+  bottom: -1px;
 }
 
 @media (max-width: 980px) {

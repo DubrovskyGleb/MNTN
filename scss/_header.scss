@@ -31,8 +31,11 @@
     }
     &__link{
         font-family: $gilroyB;
-        color: #fff;
         font-size: 18px;
+        display: flex;
+        &::before{
+            bottom: -5px;
+        }
     }
 }
 

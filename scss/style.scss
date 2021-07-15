@@ -72,6 +72,26 @@ body._lock{
     }
 }
 
+.common__link{
+    position: relative;
+    color: #ffffff;
+    justify-content: center;
+    &:hover{
+        color: #ececec;
+        &::before{
+            width: 100%;
+        }
+    }
+    &::before{
+        content: "";
+        width: 0%;
+        height: 1px;
+        background-color: $orange;
+        position: absolute;
+        transition: all 0.2s ease 0s;
+    }
+}
+
 @media(max-width: 1810px){
     .container{
         @include adaptiv-value("padding-right", 50, 20, 1);
