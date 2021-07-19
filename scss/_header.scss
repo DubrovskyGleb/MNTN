@@ -4,13 +4,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include adaptiv-value("padding-top", 50, 10, 1);
+    @include adaptiv-value("padding-top", 30, 10, 1);
+    @include adaptiv-value("padding-bottom", 30, 10, 1);
     position: fixed;
+    top: -100%;
+    transition: background-color 0.5s ease 0s, top 1.5s ease 0s;
     z-index: 7;
     &__logo{
         position: absolute;
-        top: 46%;
+        top: 20%;
     }
+}
+
+.header._active{
+    top: 0;
+    transition: top 0.5s ease 0s;
 }
 
 .menu{
@@ -62,7 +70,7 @@
 
     .menu{
         position: fixed;
-        background-color: #0B1D26;
+        background-color:#0B1D26;
         width: 50%;
         height: 100%;
         display: grid;

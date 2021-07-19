@@ -38,3 +38,19 @@ window.onload = function () {
 
     }
 }
+
+let positionStart = window.pageYOffset;
+const header = document.querySelector('.header');
+const wrapper = document.querySelector('.content__wrapper');
+let wrapperOffset = wrapper.offsetTop;
+
+window.addEventListener('scroll', () => {
+
+    let positionCurrent = window.pageYOffset;
+    let clientHeight = document.documentElement.clientHeight;
+
+    positionCurrent > positionStart ? header.classList.remove('_active') : header.classList.add('_active');
+    positionCurrent > clientHeight ? header.style.backgroundColor = "#061015" : header.style.backgroundColor = "inherit";
+    positionStart = positionCurrent;
+
+});
