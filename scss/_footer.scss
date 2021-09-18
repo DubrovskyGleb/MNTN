@@ -1,6 +1,8 @@
 .footer{
     background-color: #061015;
     color: #ffffff;
+    @include adaptiv-value("padding-top", 100, 25, 1);
+    @include adaptiv-value("padding-bottom", 100, 25, 1);
     &__container{
         display: flex;
         align-items: stretch;

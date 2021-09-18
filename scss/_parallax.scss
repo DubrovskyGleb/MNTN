@@ -41,6 +41,10 @@
 	left: 0;
 }
 
+.parallax__item:last-child{
+    pointer-events: none;
+}
+
 .parallax-content{
     display: flex;
     justify-content: center;

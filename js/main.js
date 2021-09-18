@@ -1,6 +1,30 @@
 "use strict"
 
 const burger = document.querySelector('.burger');
+const started = document.querySelector('#started');
+
+console.log(started.offsetTop);
+
+document.addEventListener('click', (e) => {
+    scrollToElement(e);
+});
+
+function scrollToElement(e) {
+    if (e.target.closest('.scrollTo')) {
+        e.preventDefault();
+
+        const currentLink = e.target.closest('.scrollTo');
+        const sectionId = currentLink.getAttribute('href');
+        const currentSection = document.querySelector(sectionId);
+        console.log(currentSection);
+
+        window.scroll({
+            left: 0,
+            top: currentSection.offsetTop,
+            behavior: 'smooth'
+        })
+    }
+}
 
 burger.addEventListener('click', function () {
     document.body.classList.toggle('_lock');
@@ -35,22 +59,22 @@ window.onload = function () {
             mountains.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 3}%);`;
             human.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 2}%);`;
         }
-
     }
 }
 
+//Смена цвета меню и его появление при скролле вверх
 let positionStart = window.pageYOffset;
 const header = document.querySelector('.header');
-const wrapper = document.querySelector('.content__wrapper');
-let wrapperOffset = wrapper.offsetTop;
 
 window.addEventListener('scroll', () => {
-
     let positionCurrent = window.pageYOffset;
     let clientHeight = document.documentElement.clientHeight;
 
     positionCurrent > positionStart ? header.classList.remove('_active') : header.classList.add('_active');
     positionCurrent > clientHeight ? header.style.backgroundColor = "#061015" : header.style.backgroundColor = "inherit";
     positionStart = positionCurrent;
-
 });
+
+
+
+

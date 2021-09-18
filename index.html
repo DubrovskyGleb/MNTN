@@ -48,18 +48,21 @@
             </div>
             <div class="scroll">
                 <ul class="scroll__list">
-                    <li class="scroll__item"><a href="#" class="scroll__link _active">Start</a></li>
-                    <li class="scroll__item"><a href="#" class="scroll__link">01</a></li>
-                    <li class="scroll__item"><a href="#" class="scroll__link">02</a></li>
-                    <li class="scroll__item"><a href="#" class="scroll__link">03</a></li>
+                    <li class="scroll__item"><a href="#hero" class="scroll__link scrollTo _active">Start</a></li>
+                    <li class="scroll__item"><a href="#started" class="scroll__link scrollTo">01</a></li>
+                    <li class="scroll__item"><a href="#essential" class="scroll__link scrollTo">02</a></li>
+                    <li class="scroll__item"><a href="#key" class="scroll__link scrollTo">03</a></li>
                 </ul>
                 <div class="scroll__slider"></div>
-                <div class="scroll__marker"></div>
+                <div class="scroll__distance">
+                    <div class="scroll__marker"></div>
+                </div>
+
             </div>
         </div>
     </div>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="space hero__space">
             <div class="hero__body">
                 <div class="parallax">
@@ -77,10 +80,10 @@
                                 <span class="description__text">A Hiking guide</span>
                             </div>
                             <h1 class="hero__title">Be prepared for the <br> Mountains and beyond!</h1>
-                            <!-- <button class="hero__button button">
+                            <a href="#contentWrapper" class="hero__button button scrollTo">
                                 <span>scroll down</span>
                                 <img src="img/arrow_white.png" alt="arrow">
-                            </button> -->
+                            </a>
                         </div>
                     </div>
                     <div class="parallax__item">
@@ -90,9 +93,9 @@
             </div>
     </section>
 
-    <div class="content__wrapper">
+    <div id="contentWrapper" class="content__wrapper">
 
-        <section class="started block__space">
+        <section id="started" class="started block__space">
             <div class="block__container">
                 <div class="block__content">
                     <span class="block__number">01</span>
@@ -120,7 +123,7 @@
             </div>
         </section>
 
-        <section class="essential block__space">
+        <section id="essential" class="essential block__space">
             <div class="block__container">
                 <div class="block__image image-mountain">
                     <img src="img/mountain.png" alt="mountain">
@@ -147,7 +150,7 @@
             </div>
         </section>
 
-        <section class="key block__space">
+        <section id="key" class="key block__space">
             <div class="block__container">
                 <div class="block__content">
                     <span class="block__number">03</span>
@@ -173,7 +176,7 @@
             </div>
         </section>
 
-        <footer class="footer block__space">
+        <footer class="footer">
             <div class="block__container footer__container">
                 <div class="footer__completion">
                     <div class="footer__title">

@@ -376,6 +376,18 @@ body._lock {
   }
 }
 
+@media (max-width: 1680px) {
+  .content__wrapper {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 1680px) and (max-width: 1760px) {
+  .content__wrapper {
+    padding-top: calc(20px + 30 * ((100vw - 320px) / 1440));
+  }
+}
+
 .header {
   width: 100%;
   height: auto;
@@ -665,6 +677,10 @@ body._lock {
   left: 0;
 }
 
+.parallax__item:last-child {
+  pointer-events: none;
+}
+
 .parallax-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -762,7 +778,7 @@ body._lock {
 }
 
 .scroll__item {
-  padding: 20px 0;
+  padding: 22px 0 21px 0;
   text-align: end;
 }
 
@@ -774,6 +790,12 @@ body._lock {
   margin-left: 32px;
   border-radius: 1px;
   opacity: .3;
+}
+
+.scroll__distance {
+  width: 3px;
+  height: 183px;
+  position: relative;
 }
 
 .scroll__marker {
@@ -819,6 +841,10 @@ body._lock {
 }
 
 .block__space {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -888,8 +914,8 @@ body._lock {
 
 .block__number {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 145px;
+  left: 31px;
   font-family: "Gilroy-Bold";
   line-height: 100%;
   color: #FFFFFF;
@@ -955,12 +981,31 @@ body._lock {
   }
 }
 
+.block__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
 .block__image img {
   max-width: 100%;
 }
 
 .block__button span {
   color: #FBD784;
+}
+
+@media (max-width: 1680px) {
+  .block__space {
+    min-height: auto;
+    display: block;
+  }
+  .block__number {
+    top: 0;
+    left: 20px;
+  }
 }
 
 @media (max-width: 980px) {
@@ -992,6 +1037,9 @@ body._lock {
   }
   .block__image img {
     display: none;
+  }
+  .block__number {
+    left: 0;
   }
   .image-way {
     background: url(../img/way.png) bottom/cover no-repeat;
@@ -1032,6 +1080,20 @@ body._lock {
 .footer {
   background-color: #061015;
   color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 1760px) {
+  .footer {
+    padding-top: calc(25px + 75 * ((100vw - 320px) / 1440));
+  }
+}
+
+@media (max-width: 1760px) {
+  .footer {
+    padding-bottom: calc(25px + 75 * ((100vw - 320px) / 1440));
+  }
 }
 
 .footer__container {
