@@ -1,9 +1,9 @@
 "use strict"
 
 const burger = document.querySelector('.burger');
-const started = document.querySelector('#started');
-
-console.log(started.offsetTop);
+const marker = document.querySelector('.scroll__marker');
+const observedBlocks = document.querySelectorAll('.observedBlock');
+const markerTop = { hero: 0, started: 25, essential: 50, key: 75 };
 
 document.addEventListener('click', (e) => {
     scrollToElement(e);
@@ -16,12 +16,10 @@ function scrollToElement(e) {
         const currentLink = e.target.closest('.scrollTo');
         const sectionId = currentLink.getAttribute('href');
         const currentSection = document.querySelector(sectionId);
-        console.log(currentSection);
 
-        window.scroll({
-            left: 0,
-            top: currentSection.offsetTop,
-            behavior: 'smooth'
+        currentSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         })
     }
 }
@@ -60,6 +58,24 @@ window.onload = function () {
             human.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 2}%);`;
         }
     }
+
+    const scrollObserver = new IntersectionObserver(function (entries, scrollObserver) {
+        entries.forEach(entry => {
+            const sectionId = entry.target.getAttribute('id');
+            const currentLink = document.querySelector(`a[href="#${sectionId}"]`);
+
+            if (entry.isIntersecting) {
+                currentLink.classList.add('_active');
+                marker.style.top = `${markerTop[sectionId]}%`;
+            } else {
+                currentLink.classList.remove('_active');
+            }
+        })
+    }, { threshold: 0.3 });
+
+    observedBlocks.forEach(observedBlock => {
+        scrollObserver.observe(observedBlock);
+    })
 }
 
 //Смена цвета меню и его появление при скролле вверх
@@ -74,7 +90,5 @@ window.addEventListener('scroll', () => {
     positionCurrent > clientHeight ? header.style.backgroundColor = "#061015" : header.style.backgroundColor = "inherit";
     positionStart = positionCurrent;
 });
-
-
 
 

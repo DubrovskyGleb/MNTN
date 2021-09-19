@@ -772,9 +772,9 @@ body._lock {
 }
 
 .scroll__link._active {
-  color: #ffffff;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .scroll__item {
@@ -805,6 +805,8 @@ body._lock {
   border-radius: 2px;
   background-color: #fff;
   right: 0;
+  -webkit-transition: top 0.5s ease 0s;
+  transition: top 0.5s ease 0s;
 }
 
 @media (max-width: 1810px) {
@@ -914,7 +916,7 @@ body._lock {
 
 .block__number {
   position: absolute;
-  top: 145px;
+  top: 30px;
   left: 31px;
   font-family: "Gilroy-Bold";
   line-height: 100%;

@@ -20,10 +20,3 @@ $maxWidthContainer: 1760;
     #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
   }
 }
-
-// @mixin adaptiv-position($property){
-//   $width: 100vw;
-//   @if ($width == 1760px) {
-//     #{$property}: none;
-//   }
-// }

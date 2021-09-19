@@ -50,8 +50,8 @@
         font-size: 18px;
     }
     &__link._active{
-        color: #ffffff;
-        transform: scale(1.5);
+        color: #fff;
+        transition: all 0.3s ease 0s;
     }
     &__item{
         padding: 22px 0 21px 0; 
@@ -78,6 +78,7 @@
         border-radius: 2px;
         background-color: #fff;
         right: 0;
+        transition: top 0.5s ease 0s;
     }
 }
 
