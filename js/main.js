@@ -67,6 +67,9 @@ window.onload = function () {
             if (entry.isIntersecting) {
                 currentLink.classList.add('_active');
                 marker.style.top = `${markerTop[sectionId]}%`;
+                if (!entry.target.classList.contains('hero')) {
+                    entry.target.classList.add('_active');
+                }
             } else {
                 currentLink.classList.remove('_active');
             }

@@ -11,10 +11,12 @@
         align-items: stretch;
         justify-content: space-between;  
         margin: 0 auto;
+        overflow: hidden;
         @include adaptiv-value("padding-right", 50, 20, 1);
         @include adaptiv-value("padding-left", 50, 20, 1);
     }
     &__content{
+        content: '';
         position: relative;
         display: flex;
         justify-content: center;
@@ -24,6 +26,7 @@
         padding-right: 50px;
     }
     &__number{
+        content: '';
         position: absolute;
         top: 30px;
         left: 31px;
@@ -54,6 +57,7 @@
         @include adaptiv-value("margin-bottom", 27, 10, 1);
     }
     &__image{
+        content: '';
         display: flex;
         align-self: center;
     }
@@ -66,6 +70,60 @@
         }
     }
 }
+
+.started__content,
+.key__content{
+    transform: translateX(-150%);
+}
+
+.started__number,
+.key__number{
+    transform: translateX(-300%);
+}
+
+.started__image,
+.key__image{
+    transform: translateX(150%);
+}
+
+.block__space._active > .block__container > .block__content{
+    transform: translateX(0);
+    transition: all 0.8s ease 0s;
+}
+
+.block__space._active > .block__container > .block__content > .block__number{
+    transform: translateX(0);
+    transition: all 0.8s ease 0.3s;
+}
+
+.block__space._active > .block__container > .block__image{
+    transform: translateX(0);
+    transition: all 0.8s ease 0s;
+}
+
+.essential{
+    &__content{
+        padding-right: 0px;
+        @include adaptiv-value("padding-left", 150, 5, 1);
+        transform: translateX(150%);
+    }
+    &__number{
+        transform: translateX(300%);
+    }
+    &__image{
+        transform: translateX(-150%);
+    }
+}
+
+.essential,
+.key{
+    background-color: $bc;
+}
+
+.started{
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, $bc 40%);
+}
+
 @media (max-width: 1680px) {
     .block{
         &__space{
@@ -106,34 +164,15 @@
         }
     }
 
-    .image-way{
+    .started__image{
         background: url(../img/way.png) bottom / cover no-repeat;
     }
 
-    .image-mountain{
+    .essential__image{
         background: url(../img/mountain.png) center / cover no-repeat;
     }
 
-    .image-compass{
+    .key__image{
         background: url(../img/compass.png) 0% 70% / cover no-repeat;
     }
-}
-
-.essential{
-    &__content{
-        padding-right: 0px;
-        @include adaptiv-value("padding-left", 150, 5, 1);
-    }
-    &__number{
-        left: 100px;
-    }
-}
-
-.essential,
-.key{
-    background-color: $bc;
-}
-
-.started{
-    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, $bc 40%);
 }

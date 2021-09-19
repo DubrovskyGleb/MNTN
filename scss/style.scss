@@ -99,11 +99,11 @@ body._lock{
     }
 }
 
-@media (max-width: 1680px) {
-    .content__wrapper{
-        @include adaptiv-value("padding-top", 50, 20, 1);
-    }
-}
+// @media (max-width: 1680px) {
+//     .content__wrapper{
+//         @include adaptiv-value("padding-top", 50, 20, 1);
+//     }
+// }
 
 @import 'header';
 @import 'hero';
