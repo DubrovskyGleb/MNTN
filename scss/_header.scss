@@ -83,13 +83,16 @@
         &__list{
             position: static;
             flex-direction: column;
-            justify-content: end;
+            justify-content: flex-start;
             padding-top: 40px;
             order: 2;
         }
         &__item{
             text-align: center;
             padding-bottom: 20px;
+        }
+        &__link{
+            display: inline-flex;
         }
     }
 

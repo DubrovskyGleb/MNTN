@@ -511,9 +511,9 @@ body._lock {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding-top: 40px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -522,6 +522,11 @@ body._lock {
   .menu__item {
     text-align: center;
     padding-bottom: 20px;
+  }
+  .menu__link {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
   .menu._active {
     right: 0;
