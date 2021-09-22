@@ -1137,11 +1137,26 @@ body._lock {
   .started__image {
     background: url(../img/way.png) bottom/cover no-repeat;
   }
+  @supports (background-image: url("../img/way.webp")) {
+    .started__image {
+      background: url("../img/way.webp") bottom/cover no-repeat;
+    }
+  }
   .essential__image {
     background: url(../img/mountain.png) center/cover no-repeat;
   }
+  @supports (background-image: url("../img/mountain.webp")) {
+    .essential__image {
+      background: url("../img/mountain.webp") center/cover no-repeat;
+    }
+  }
   .key__image {
     background: url(../img/compass.png) 0% 70%/cover no-repeat;
+  }
+  @supports (background-image: url("../img/compass.webp")) {
+    .key__image {
+      background: url("../img/compass.webp") 0% 70%/cover no-repeat;
+    }
   }
 }
 
