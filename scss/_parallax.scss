@@ -4,31 +4,45 @@
 	height: 100%;
 	z-index: 1;
     &__clouds{
-        background: url("../img/clouds.png") top / cover no-repeat;
+        background-image: url("../img/clouds.png");
+        @supports (background-image: url("../img/clouds.webp")) {
+            background-image: url("../img/clouds.webp");
+        }
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
         top: 0;
     }
     &__gradient{
         background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
-        // z-index: 2;
     }
     &__mountains{
-        background: url("../img/mountains.png") top / cover no-repeat;
+        background-image: url("../img/mountains.png");
+        @supports (background-image: url("../img/mountains.webp")) {
+            background-image: url("../img/mountains.webp");
+        }
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
         top: 40%;
-        // z-index: 3;
     }
     &__human{
-        background: url("../img/human.png") top / cover no-repeat;
+        background-image: url("../img/human.png");
+        @supports (background-image: url("../img/human.webp")) {
+            background-image: url("../img/human.webp");
+        }
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
         top: 65%;
-        // z-index: 7;
     }
     &__content{
         position: absolute;
-        // display: flex;
-        // flex-direction: column;
         top: 20%;
-        // z-index: 2;
     }
 }
+
+
 
 .parallax__item,
 .parallax__clouds,

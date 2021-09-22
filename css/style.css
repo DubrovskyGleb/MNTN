@@ -631,8 +631,17 @@ body._lock {
 }
 
 .parallax__clouds {
-  background: url("../img/clouds.png") top/cover no-repeat;
+  background-image: url("../img/clouds.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
   top: 0;
+}
+
+@supports (background-image: url("../img/clouds.webp")) {
+  .parallax__clouds {
+    background-image: url("../img/clouds.webp");
+  }
 }
 
 .parallax__gradient {
@@ -640,13 +649,31 @@ body._lock {
 }
 
 .parallax__mountains {
-  background: url("../img/mountains.png") top/cover no-repeat;
+  background-image: url("../img/mountains.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
   top: 40%;
 }
 
+@supports (background-image: url("../img/mountains.webp")) {
+  .parallax__mountains {
+    background-image: url("../img/mountains.webp");
+  }
+}
+
 .parallax__human {
-  background: url("../img/human.png") top/cover no-repeat;
+  background-image: url("../img/human.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
   top: 65%;
+}
+
+@supports (background-image: url("../img/human.webp")) {
+  .parallax__human {
+    background-image: url("../img/human.webp");
+  }
 }
 
 .parallax__content {
