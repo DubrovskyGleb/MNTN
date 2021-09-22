@@ -75,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 @font-face {
   font-family: 'Gilroy-ExtraBold';
+  font-display: swap;
   src: url("../fonts/gilroy/gilroy-extrabold.eot");
   /* IE 9 Compatibility Mode */
   src: url("../fonts/gilroy/gilroy-extrabold.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/gilroy-extrabold.woff2") format("woff2"), url("../fonts/gilroy/gilroy-extrabold.woff") format("woff"), url("../fonts/gilroy/gilroy-extrabold.ttf") format("truetype"), url("../fonts/gilroy/gilroy-extrabold.svg#gilroy-extrabold") format("svg");
@@ -83,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @font-face {
   font-family: 'Gilroy-Bold';
+  font-display: swap;
   src: url("../fonts/gilroy/gilroy-bold.eot");
   /* IE 9 Compatibility Mode */
   src: url("../fonts/gilroy/gilroy-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/gilroy-bold.woff2") format("woff2"), url("../fonts/gilroy/gilroy-bold.woff") format("woff"), url("../fonts/gilroy/gilroy-bold.ttf") format("truetype"), url("../fonts/gilroy/gilroy-bold.svg#gilroy-bold") format("svg");
@@ -91,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @font-face {
   font-family: 'Gilroy-Medium';
+  font-display: swap;
   src: url("../fonts/gilroy/gilroy-medium.eot");
   /* IE 9 Compatibility Mode */
   src: url("../fonts/gilroy/gilroy-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/gilroy-medium.woff2") format("woff2"), url("../fonts/gilroy/gilroy-medium.woff") format("woff"), url("../fonts/gilroy/gilroy-medium.ttf") format("truetype"), url("../fonts/gilroy/gilroy-medium.svg#gilroy-medium") format("svg");
@@ -99,6 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @font-face {
   font-family: 'ChronicleDisplay-Roman';
+  font-display: swap;
   src: url("../fonts/chronicle/ChronicleDisplay-Roman.eot");
   src: url("../fonts/chronicle/ChronicleDisplay-Roman.eot?#iefix") format("embedded-opentype"), url("../fonts/chronicle/ChronicleDisplay-Roman.svg#ChronicleDisplay-Roman") format("svg"), url("../fonts/chronicle/ChronicleDisplay-Roman.ttf") format("truetype"), url("../fonts/chronicle/ChronicleDisplay-Roman.woff") format("woff"), url("../fonts/chronicle/ChronicleDisplay-Roman.woff2") format("woff2");
   font-weight: normal;
